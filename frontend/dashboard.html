@@ -9,8 +9,26 @@
 <body>
     <h1>Dashboard</h1>
     <button id="logout-btn">Logout</button>
-    <div id="projects"></div>
+    <h2>Projects</h2>
+    <ul id="project-list"></ul>
+
+    <h2>Create Project</h2>
+    <form id="create-project-form">
+        <input type="text" id="project-name" placeholder="Project Name" required>
+        <button type="submit">Create</button>
+    </form>
+    <h2>Tasks</h2>
+    <ul id="task-list"></ul>
+
+    <h2>Create Task</h2>
+    <form id="create-task-form">
+        <input type="text" id="task-title" placeholder="Task Title" required>
+        <input type="number" id="task-project" placeholder="Project ID" required>
+        <button type="submit">Create</button>
+    </form>
+    <script src="js/utils.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/project.js"></script>
+    <script src="js/task.js"></script>
 </body>
 </html>

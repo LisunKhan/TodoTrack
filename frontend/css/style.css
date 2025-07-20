@@ -1,0 +1,15 @@
+body {
+    font-family: sans-serif;
+    margin: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+input {
+    margin-bottom: 1em;
+    padding: 0.5em;
+}

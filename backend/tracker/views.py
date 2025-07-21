@@ -12,7 +12,13 @@ class ProjectViewSet(viewsets.ModelViewSet):
         return self.request.user.owned_projects.all()
 
     def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
+        print("Creating project with data:", serializer.validated_data)
+        try:
+            serializer.save(owner=self.request.user)
+            print("Project created successfully")
+        except Exception as e:
+            print("Error creating project:", e)
+            raise e
 
 class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
